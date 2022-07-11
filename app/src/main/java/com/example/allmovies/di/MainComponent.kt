@@ -1,7 +1,7 @@
 package com.example.allmovies.di
 
-import androidx.fragment.app.Fragment
 import com.example.allmovies.MainActivity
+import com.example.allmovies.ui.HomeFragment
 import dagger.Subcomponent
 
 @Subcomponent(modules = [])
@@ -12,5 +12,5 @@ interface MainComponent {
     }
 
     fun inject(activity: MainActivity)
-    fun inject(fragment: Fragment)
+    fun inject(fragment: HomeFragment)
 }
