@@ -86,6 +86,7 @@ class HomeDataSourceImpl @Inject constructor(private val tmdbApi: TmdbApi) : Hom
             is NetworkResponse.ApiError -> Pair(null, NetworkResponse.ApiError(response.body, response.code))
             is NetworkResponse.NetworkError -> Pair(null, NetworkResponse.NetworkError(IOException()))
             is NetworkResponse.UnknownError -> Pair(null, NetworkResponse.UnknownError(Throwable()))
+            else -> Pair(null, NetworkResponse.UnknownError(Throwable()))
         }
     }
 }

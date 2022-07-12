@@ -12,7 +12,10 @@ import javax.inject.Singleton
 @Singleton
 @Component(
     modules = [
+//        DatabaseModule::class,
         NetworkModule::class,
+        DispatcherModule::class,
+        DataModule::class,
         ViewModelBuilderModule::class,
         SubcomponentsModule::class,
         MainModule::class
